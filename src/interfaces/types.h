@@ -394,7 +394,7 @@ struct VariablePresentationHint
     std::string visibility;
 };
 
-// https://docs.microsoft.com/en-us/visualstudio/extensibility/debugger/reference/evalflags
+// https://learn.microsoft.com/en-us/visualstudio/extensibility/debugger/reference/evalflags?view=visualstudio&tabs=cpp
 enum enum_EVALFLAGS {
     EVAL_RETURNVALUE = 0x0002,
     EVAL_NOSIDEEFFECTS = 0x0004,
@@ -464,7 +464,7 @@ struct FuncBreakpoint
 };
 
 // Based on CorDebugExceptionCallbackType, but include info about JMC status in catch handler.
-// https://docs.microsoft.com/en-us/dotnet/framework/unmanaged-api/debugging/cordebugexceptioncallbacktype-enumeration
+// https://learn.microsoft.com/en-us/dotnet/core/unmanaged-api/debugging/icordebug/cordebugexceptioncallbacktype-enumeration
 enum class ExceptionCallbackType
 {
     FIRST_CHANCE,

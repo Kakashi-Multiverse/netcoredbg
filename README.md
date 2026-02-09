@@ -35,7 +35,7 @@ Currently, NetCoreDbg can be built on Linux, MacOS, or Windows. Instructions for
 
 ### Unix
 
-NetCoreDbg's build requires Microsoft's .NET, and as such, NetCoreDbg can only be built in Linux. Microsoft supports a few distributions, the details of which can be found here: https://docs.microsoft.com/en-us/dotnet/core/install/linux.
+NetCoreDbg's build requires Microsoft's .NET, and as such, NetCoreDbg can only be built in Linux. Microsoft supports a few distributions, the details of which can be found here: https://learn.microsoft.com/en-us/dotnet/core/install/linux.
 
 #### Prerequisites
 

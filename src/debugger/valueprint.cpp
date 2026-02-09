@@ -163,7 +163,7 @@ static HRESULT PrintEnumValue(ICorDebugValue* pInputValue, BYTE* enumValue, std:
     // Enum could have explicitly specified any integral numeric type. enumValue type same as enumUnderlyingType.
     ULONG64 curValue = getValue(enumValue);
 
-    // Care about Flags attribute (https://docs.microsoft.com/en-us/dotnet/api/system.flagsattribute),
+    // Care about Flags attribute (https://learn.microsoft.com/en-us/dotnet/api/system.flagsattribute),
     // that "Indicates that an enumeration can be treated as a bit field; that is, a set of flags".
     bool foundFlagsAttr = HasAttribute(pMD, currentTypeDef, "System.FlagsAttribute..ctor");
 

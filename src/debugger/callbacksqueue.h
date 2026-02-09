@@ -11,7 +11,7 @@
 namespace netcoredbg
 {
 
-// https://docs.microsoft.com/en-us/dotnet/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method
+// https://learn.microsoft.com/en-us/dotnet/core/unmanaged-api/debugging/icordebug/icordebugcontroller-hasqueuedcallbacks-method
 //
 // Callbacks will be dispatched one at a time, each time ICorDebugController::Continue is called.
 // The debugger can check this flag if it wants to report multiple debugging events that occur simultaneously.

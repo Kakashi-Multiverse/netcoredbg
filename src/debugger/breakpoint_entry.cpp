@@ -190,7 +190,7 @@ HRESULT EntryBreakpoint::ManagedCallbackLoadModule(ICorDebugModule *pModule)
         SUCCEEDED(pMD->GetMethodProps(entryPointToken, &mdMainClass, funcName, _countof(funcName), &funcNameLen,
                                       nullptr, nullptr, nullptr, nullptr, nullptr)) &&
         // The `Main` method is the entry point of a C# application. (Libraries and services do not require a Main method as an entry point.)
-        // https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/main-and-command-args/
+        // https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/program-structure/main-command-line
         // In case of async method as entry method, GetEntryPointTokenFromFile() should return compiler's generated method `<Main>`, plus,
         // this should be method without user code.
         str_equal(funcName, W("<Main>")))

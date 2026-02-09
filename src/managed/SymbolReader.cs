@@ -1437,7 +1437,7 @@ namespace NetCoreDbg
                                 yield_offset = blobReader.ReadUInt32(),
                                 resume_offset = blobReader.ReadUInt32(),
                                 // explicit conversion from int into uint here, see:
-                                // https://docs.microsoft.com/en-us/dotnet/api/system.reflection.metadata.blobreader.readcompressedinteger
+                                // https://learn.microsoft.com/en-us/dotnet/api/system.reflection.metadata.blobreader.readcompressedinteger
                                 token = (uint)blobReader.ReadCompressedInteger()
                             });
                         }

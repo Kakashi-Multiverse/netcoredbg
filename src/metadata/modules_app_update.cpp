@@ -12,9 +12,9 @@ namespace netcoredbg
 {
 
 // Get data from 'MetadataUpdateHandler' attribute.
-// https://docs.microsoft.com/en-us/dotnet/api/system.reflection.metadata.metadataupdatehandlerattribute?view=net-6.0
+// https://learn.microsoft.com/en-us/dotnet/api/system.reflection.metadata.metadataupdatehandlerattribute
 // Note, provided by attribute type have same format as Type.GetType(String) argument
-// https://docs.microsoft.com/en-us/dotnet/api/system.type.gettype?view=net-6.0#system-type-gettype
+// https://learn.microsoft.com/en-us/dotnet/api/system.type.gettype?view=net-10.0#system-type-gettype
 static HRESULT GetUpdateHandlerTypesForModule(IMetaDataImport *pMD, std::vector<std::string> &updateHandlerTypes)
 {
     static const std::string metadataUpdateHandlerAttribute = "System.Reflection.Metadata.MetadataUpdateHandlerAttribute..ctor";
@@ -53,7 +53,7 @@ static HRESULT GetUpdateHandlerTypesForModule(IMetaDataImport *pMD, std::vector<
 }
 
 // Parse type name. More info:
-// https://docs.microsoft.com/en-us/dotnet/framework/reflection-and-codedom/specifying-fully-qualified-type-names
+// https://learn.microsoft.com/en-us/dotnet/fundamentals/reflection/specifying-fully-qualified-type-names
 // Note, in MetadataUpdateHandler attribute case, type name will not have assembly relative parts.
 // Backtick (`)      Precedes one or more digits representing the number of type parameters, located at the end of the name of a generic type.
 // Brackets ([])     Enclose a generic type argument list, for a constructed generic type; within a type argument list, enclose an assembly-qualified type.

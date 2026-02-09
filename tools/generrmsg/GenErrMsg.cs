@@ -22,7 +22,7 @@ namespace generrmsg
 
     public class GenErrMsg
     {
-        // See https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a for more details
+        // See https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a for more details
         private const int SEVERITY_BIT_OFFSET = 31;
         private const int FACILITY_BITS_OFFSET = 16;
 
@@ -268,7 +268,7 @@ namespace generrmsg
             sw.WriteLine();
             sw.WriteLine("#ifndef FACILITY_URT");
             sw.WriteLine("// The source of the error code is .NET CLR.");
-            sw.WriteLine("// See https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a for more details"); 
+            sw.WriteLine("// See https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a for more details"); 
             sw.WriteLine("#define FACILITY_URT            0x13");
             sw.WriteLine("#endif");
             sw.WriteLine("#ifndef EMAKEHR");

@@ -552,7 +552,7 @@ HRESULT Modules::TryLoadModuleSymbols(ICorDebugModule *pModule, Module &module, 
                 // since this is the only way provide good speed for stepping in case "JMC disabled".
                 // But in case "JMC disabled", debugger must care about different logic for exceptions/stepping/breakpoints.
 
-                // https://docs.microsoft.com/en-us/visualstudio/debugger/just-my-code
+                // https://learn.microsoft.com/en-us/visualstudio/debugger/just-my-code?view=visualstudio
                 // The .NET debugger considers optimized binaries and non-loaded .pdb files to be non-user code.
                 // Three compiler attributes also affect what the .NET debugger considers to be user code:
                 // * DebuggerNonUserCodeAttribute tells the debugger that the code it's applied to isn't user code.

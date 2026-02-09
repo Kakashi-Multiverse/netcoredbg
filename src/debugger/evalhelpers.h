@@ -90,7 +90,7 @@ private:
     std::mutex m_typeObjectCacheMutex;
     // Because handles affect the performance of the garbage collector, the debugger should limit itself to a relatively
     // small number of handles (about 256) that are active at a time.
-    // https://docs.microsoft.com/en-us/dotnet/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method
+    // https://learn.microsoft.com/en-us/dotnet/core/unmanaged-api/debugging/icordebug/icordebugheapvalue2-createhandle-method
     // Note, we also use handles (results of eval) in var refs during brake (cleared at 'Continue').
     // Warning! Since we use `std::prev(m_typeObjectCache.end())` without any check in code, make sure cache size is `2` or bigger.
     static const size_t m_typeObjectCacheSize = 100;

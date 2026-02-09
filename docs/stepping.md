@@ -3,8 +3,8 @@
 ## Async method stepping.
 
 Overal info about async/await:</br>
-https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/</br>
-https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/async</br>
+https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios</br>
+https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/async</br>
 
 Good article about async/await realization in Russian:</br>
 https://m.habr.com/ru/post/260217/

@@ -176,7 +176,7 @@ void Init(const std::string &coreClrPath)
 
     // Pin the module - CoreCLR.so/dll does not support being unloaded.
     // "CoreCLR does not support reinitialization or unloading. Do not call `coreclr_initialize` again or unload the CoreCLR library."
-    // https://docs.microsoft.com/en-us/dotnet/core/tutorials/netcore-hosting
+    // https://learn.microsoft.com/en-us/dotnet/core/tutorials/netcore-hosting
     DLHandle coreclrLib = DLOpen(coreClrPath);
     if (coreclrLib == nullptr)
         throw std::invalid_argument("Failed to load coreclr path=" + coreClrPath);

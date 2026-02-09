@@ -360,11 +360,11 @@ HRESULT ExceptionBreakpoints::GetExceptionInfo(ICorDebugThread *pThread, Excepti
     disabled JMC: throw                           none                                 unhandled (reset thread status)
 
     Reset exception thread status not only for `catch` but for `unhandled` too, since we may have not fatal unhandled exceptions,
-    for example, System.AppDomainUnloadedException (https://docs.microsoft.com/en-us/dotnet/api/system.appdomainunloadedexception).
+    for example, System.AppDomainUnloadedException (https://learn.microsoft.com/en-us/dotnet/api/system.appdomainunloadedexception).
 
     More related info:
     https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md#exception-settings
-    https://docs.microsoft.com/en-us/visualstudio/debugger/managing-exceptions-with-the-debugger
+    https://learn.microsoft.com/en-us/visualstudio/debugger/managing-exceptions-with-the-debugger?view=visualstudio
 */
 HRESULT ExceptionBreakpoints::ManagedCallbackException(ICorDebugThread *pThread, ExceptionCallbackType eventType, std::string excModule, StoppedEvent &event)
 {

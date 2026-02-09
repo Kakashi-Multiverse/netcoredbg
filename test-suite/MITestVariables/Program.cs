@@ -11,7 +11,7 @@ namespace NetcoreDbgTest.Script
 {
     class Context
     {
-        // https://docs.microsoft.com/en-us/visualstudio/extensibility/debugger/reference/evalflags
+        // https://learn.microsoft.com/en-us/visualstudio/extensibility/debugger/reference/evalflags?view=visualstudio&tabs=cpp
         public enum enum_EVALFLAGS {
             EVAL_RETURNVALUE = 0x0002,
             EVAL_NOSIDEEFFECTS = 0x0004,

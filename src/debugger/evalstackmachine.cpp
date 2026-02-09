@@ -600,8 +600,8 @@ namespace
         HRESULT Status;
 
         // Value with type was provided by caller, result must be implicitly cast to this type.
-        // https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/conversions#implicit-numeric-conversions
-        // https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types#integer-literals
+        // https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/conversions#implicit-numeric-conversions
+        // https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types#integer-literals
         
         ToRelease<ICorDebugValue> iCorRealValue1;
         CorElementType elemType1;
@@ -747,7 +747,7 @@ namespace
         std::string typeName2;
         CorElementType elemType2;
         IfFailRet(GetArgData(pType2Value, typeName2, elemType2));
-        // https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading
+        // https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading
         // A unary operator has one input parameter. A binary operator has two input parameters. In each case,
         // at least one parameter must have type T or T? where T is the type that contains the operator declaration.
         std::string typeName;

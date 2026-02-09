@@ -260,7 +260,7 @@ HRESULT EvalHelpers::TryReuseTypeObjectFromCache(ICorDebugType *pType, ICorDebug
     if (ppTypeObjectResult)
     {
         // We don't check handle's status here, since we store only strong handles.
-        // https://docs.microsoft.com/en-us/dotnet/framework/unmanaged-api/debugging/cordebughandletype-enumeration
+        // https://learn.microsoft.com/en-us/dotnet/core/unmanaged-api/debugging/icordebug/cordebughandletype-enumeration
         // The handle is strong, which prevents an object from being reclaimed by garbage collection.
         return m_typeObjectCache.front().typeObject->QueryInterface(IID_ICorDebugValue, (LPVOID *)ppTypeObjectResult);
     }

@@ -409,7 +409,7 @@ Limitations: Not supported: set and continue from any code positions.}}}
 \end{xltabular}
 
 \subsection{Display built-in types}
-These features allows showing built-in types of objects and types. Please, find the table with the built-in types: \url{https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/built-in-types-table}.
+These features allows showing built-in types of objects and types. Please, find the table with the built-in types: \url{https://learn.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/built-in-types}.
 
 \subsection{Modify basic values (int, float, string)}
 These feature allows modifying and creating objects of built-in types.
@@ -605,7 +605,7 @@ This section documents MI commands for manipulations exception breakpoints.
 
 This command add a virtual breakpoint, which automatically setups by exception event and stop execution before start of unwinding exception stack.
 
-First argument \textbf{[--mda]} --- its optional argument for set filter especially for Managed Debugging Assistants (MDA) feature. Current feature it not fully tested. Moreover, not supported for Tizen/Linux platforms. For empty this arguments will be managed CLR exception only. (See \url{https://docs.microsoft.com/ru-ru/dotnet/framework/unmanaged-api/debugging/icordebugmanagedcallback2-mdanotification-method}, \url{https://docs.microsoft.com/ru-ru/dotnet/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants#enable-and-disable-mdas)}.
+First argument \textbf{[--mda]} --- its optional argument for set filter especially for Managed Debugging Assistants (MDA) feature. Current feature it not fully tested. Moreover, not supported for Tizen/Linux platforms. For empty this arguments will be managed CLR exception only. (See \url{https://learn.microsoft.com/ru-ru/dotnet/core/unmanaged-api/debugging/icordebug/icordebugmanagedcallback2-mdanotification-method}, \url{https://learn.microsoft.com/ru-ru/dotnet/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants#enable-and-disable-mdas)}.
 
 Second argument sets filter for source of produced Exception. Where values uses as follow:
 \begin{enumerate}
@@ -655,8 +655,8 @@ Links:
  \item \url{https://sourceware.org/gdb/onlinedocs/gdb/GDB_002fMI.html#GDB_002fMI}
  \item \url{https://raw.githubusercontent.com/gregg-miskelly/MIEngine/f5f22f53908644aacffdc3f843fba20b639d07bb/src/MICore/MICommandFactory.cs}
  \item \url{https://github.com/OmniSharp/omnisharp-vscode/files/626936/vscodelog.txt}
- \item \url{https://docs.microsoft.com/ru-ru/dotnet/framework/unmanaged-api/debugging/icordebugmanagedcallback2-mdanotification-method}
- \item \url{https://docs.microsoft.com/ru-ru/dotnet/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants#enable-and-disable-mdas}
+ \item \url{https://learn.microsoft.com/ru-ru/dotnet/core/unmanaged-api/debugging/icordebug/icordebugmanagedcallback2-mdanotification-method}
+ \item \url{https://learn.microsoft.com/ru-ru/dotnet/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants#enable-and-disable-mdas}
  \item \url{https://github.com/Microsoft/vscode-debugadapter-node/blob/master/debugProtocol.json}
 \end{enumerate}
 
