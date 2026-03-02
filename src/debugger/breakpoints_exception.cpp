@@ -195,10 +195,9 @@ static void GetExceptionBreakModeName(ExceptionBreakMode breakMode, std::string 
 
 HRESULT ExceptionBreakpoints::GetExceptionDetails(ICorDebugThread *pThread, ICorDebugValue *pExceptionValue, ExceptionDetails &details)
 {
-    std::string excType;
     if (FAILED(TypePrinter::GetTypeOfValue(pExceptionValue, details.fullTypeName)))
     {
-        excType = "<unknown exception>";
+        details.fullTypeName = "<unknown exception>";
     }
 
     auto lastDotPosition = details.fullTypeName.find_last_of(".");
