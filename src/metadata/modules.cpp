@@ -541,9 +541,11 @@ HRESULT Modules::TryLoadModuleSymbols(ICorDebugModule *pModule, Module &module, 
         ToRelease<ICorDebugModule2> pModule2;
         if (SUCCEEDED(pModule->QueryInterface(IID_ICorDebugModule2, (LPVOID *)&pModule2)))
         {
+            // Try to disable optimization for all modules with debug info.
+            // Note, CORDEBUG_JIT_DISABLE_OPTIMIZATION is part of CORDEBUG_JIT_ENABLE_ENC.
             if (needHotReload)
                 pModule2->SetJITCompilerFlags(CORDEBUG_JIT_ENABLE_ENC);
-            else if (!needJMC) // Note, CORDEBUG_JIT_DISABLE_OPTIMIZATION is part of CORDEBUG_JIT_ENABLE_ENC.
+            else
                 pModule2->SetJITCompilerFlags(CORDEBUG_JIT_DISABLE_OPTIMIZATION);
 
             if (SUCCEEDED(Status = pModule2->SetJMCStatus(TRUE, 0, nullptr))) // If we can't enable JMC for module, no reason disable JMC on module's types/methods.
