@@ -42,15 +42,6 @@ static HRESULT GetNonJMCMethodsForTypeDef(
     mdMethodDef methodDef;
     while(SUCCEEDED(pMD->EnumMethods(&fEnum, typeDef, &methodDef, 1, &numMethods)) && numMethods != 0)
     {
-        mdTypeDef memTypeDef;
-        ULONG nameLen;
-        WCHAR szFunctionName[mdNameLen] = {0};
-
-        if (FAILED(pMD->GetMethodProps(methodDef, &memTypeDef,
-                                       szFunctionName, _countof(szFunctionName), &nameLen,
-                                       nullptr, nullptr, nullptr, nullptr, nullptr)))
-            continue;
-
         if (HasAttribute(pMD, methodDef, methodAttrNames))
             excludeMethods.push_back(methodDef);
     }
