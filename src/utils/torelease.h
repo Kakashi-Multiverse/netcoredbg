@@ -97,6 +97,7 @@ public:
 
         m_ptr = that.m_ptr;
         that.m_ptr = nullptr;
+        return *this;
     }
 private:
     ToRelease(const ToRelease& that) = delete;
