@@ -117,8 +117,6 @@ static HRESULT EmptyContextForFrame(WalkFramesCallback cb)
 
 static HRESULT EmptyContextForTopFrame(ICorDebugThread *pThread, WalkFramesCallback cb)
 {
-    std::lock_guard<std::mutex> lock(g_mutexInteropDebugger);
-
     if (g_pInteropDebugger == nullptr)
         return EmptyContextForFrame(cb);
 
@@ -316,7 +314,10 @@ HRESULT WalkFrames(ICorDebugThread *pThread, WalkFramesCallback cb)
             if (GetIP(&ctxUnmanagedChain) == 0 || GetIP(&currentCtx) == 0)
             {
                 if (level == 1)
+                {
+                    std::lock_guard<std::mutex> lock(g_mutexInteropDebugger);
                     IfFailRet(EmptyContextForTopFrame(pThread, cb));
+                }
                 else
                     IfFailRet(EmptyContextForFrame(cb));
             }
@@ -379,7 +380,10 @@ HRESULT WalkFrames(ICorDebugThread *pThread, WalkFramesCallback cb)
             // Linux arm32 CoreCLR have issue:
             // - ICorDebugStackWalk::GetContext return empty registers context for all frames;
             if (GetIP(&currentCtx) == 0)
+            {
+                std::lock_guard<std::mutex> lock(g_mutexInteropDebugger);
                 IfFailRet(EmptyContextForTopFrame(pThread, cb));
+            }
             else
 #endif // DEBUGGER_UNIX_ARM
 #endif // INTEROP_DEBUGGING
